@@ -24,6 +24,11 @@
 // Day 7: [0, 0, 1, 1, 0, 0, 0, 0]
 
 let prisonAfterNDays = function(cells, N) {
+    if(N%14 === 0) {
+        N = 14;
+    } else {
+        N = N%14
+    }
     for(let i=0; i<N; i++) {
         let result = [];
         result[0] = result[7] = 0;
